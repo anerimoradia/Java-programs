@@ -1,0 +1,38 @@
+package decision_structures;
+
+/*
+ * PASSING ARGUMENTS TO METHODS
+ * Write an 'instant credit check' program that approves
+ * anyone who makes more than $25,000 and has a credit score
+ * of 700 or better. Reject all others.
+ */
+
+import java.util.Scanner;
+
+public class InstantCreditCheck {
+
+    public static void main(String[] args) {
+        Scanner myscanner = new Scanner(System.in);
+        System.out.println("Enter your salary:");
+        double salary = myscanner.nextDouble();
+
+        System.out.println("Enter your credit score:");
+        int creditScore = myscanner.nextInt();
+        myscanner.close();
+
+        isUserQualified(creditScore,salary);
+    }
+
+    public static void isUserQualified(int creditScore, double salary){
+        double requiredSalary = 25000;
+        int requiredCreditScore = 700;
+
+        if(creditScore >= requiredCreditScore && salary >= requiredSalary){
+            System.out.println("Congrats You have been approved");
+        }
+        else{
+            System.out.println("Sorry you have been declined");
+
+        }
+    }
+}

@@ -1,0 +1,32 @@
+package inheritance;
+
+public class BakeryClass {
+
+    public static void main(String[] args) {
+
+        Cake myCake = new Cake();
+        myCake.setPrice(29.99);
+
+        System.out.println("Cake flavor: " + myCake.getFlavor());
+        System.out.println("Cake price: " + myCake.getPrice());
+
+
+        BirthdayCake bCake = new BirthdayCake();
+        //bCake.flavor = "chocolate";
+        bCake.setFlavor("chocolate");
+        bCake.setPrice(56);
+        System.out.println("Birthday Cake flavor: " + bCake.getFlavor());
+        System.out.println("Wedding Cake price: " + bCake.getPrice());
+
+        WeddingCake wCake = new WeddingCake();
+        //wCake.flavor = "almond";
+        wCake.setFlavor("almond");
+        wCake.setPrice(23);
+        System.out.println("Wedding Cake flavor: " + wCake.getFlavor());
+        System.out.println("Wedding Cake price: " + wCake.getPrice());
+
+
+        //System.out.println("Birthday cake Flavor:" + bCake.flavor);
+        //System.out.println("Wedding cake Flavor:" + wCake.flavor);
+    }
+}

@@ -1,0 +1,41 @@
+package decision_structures;
+
+import java.util.Scanner;
+
+public class ChangeForADollar {
+    public static void main(String[] args) {
+
+        double pennies, nickles, dimes, quarters;
+        double cent;
+        double dollar = 1;
+
+        System.out.println("Welcome to the change of a dollar game! Your goal is to enter enough change to make it exactly $1.00");
+        Scanner myscanner = new Scanner(System.in);
+
+        System.out.println("Enter the number of pennies");
+        pennies = myscanner.nextDouble();      //1 cent
+
+        System.out.println("Enter the number of nickles");
+        nickles = myscanner.nextDouble();      //5 cent
+
+        System.out.println("Enter the number of dimes");
+        dimes = myscanner.nextDouble();        //10 cent
+
+        System.out.println("Enter the number of quarters");
+        quarters = myscanner.nextDouble();     //25 cent
+
+        cent = ((pennies*0.01) + (nickles*0.05) + (dimes*0.10) + (quarters*0.25));
+        double shortBy = dollar - cent;
+        double overBy = cent - dollar;
+
+        if(cent < dollar){
+            System.out.println("I am sorry you got it wrong as you were short by " + (shortBy));
+        }
+        else if(cent > dollar){
+            System.out.println("I am sorry you got it wrong as you were over by " + (overBy));
+
+        } else {
+            System.out.println("Yahoo!That's exactly $1.00. You Win ");
+        }
+    }
+}

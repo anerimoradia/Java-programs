@@ -1,0 +1,31 @@
+package inheritance;
+
+public class Cake {
+    public String flavor;
+    public double price;
+
+    public String getFlavor(){
+        return flavor;
+    }
+    public void setFlavor(String flavor){
+        this.flavor = flavor;
+    }
+
+    public double getPrice(){
+        return price;
+    }
+
+    public void setPrice(double price){
+        this.price = price;
+    }
+
+    //I did not know this
+    public Cake(){
+        this("vanilla",22.99);
+    }
+
+    public Cake(String flavor, double price){
+        setFlavor(flavor);
+        setPrice(price);
+    }
+}

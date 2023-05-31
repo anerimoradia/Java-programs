@@ -1,0 +1,24 @@
+package inheritance;
+
+public class InheritanceChecker {
+
+    //creating objects of two java classes
+
+    public static void main(String[] args) {
+        //Constructor in inheritance-------
+        //Person personObj = new Person();
+        //Employee employee = new Employee();
+
+
+        //Overridding methods-------
+        Rectangle rectangle = new Rectangle();
+        Square square = new Square();
+
+        square.print();
+
+        //Challenge Cake! Cake! Cake!
+
+        Cake myCake = new Cake();
+        myCake.flavor = "chocolate";
+    }
+}

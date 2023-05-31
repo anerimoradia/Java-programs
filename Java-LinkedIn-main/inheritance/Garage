@@ -1,0 +1,15 @@
+package inheritance;
+
+public class Garage {
+
+    public static void main(String[] args) {
+        Coupe myCar = new Coupe();
+        myCar.setColor("red");
+        //myCar.setDoors(4);
+
+        System.out.println(
+                String.format("My car is %s color and had %d doors",
+                        myCar.getColor(), myCar.getDoors())
+        );
+    }
+}
